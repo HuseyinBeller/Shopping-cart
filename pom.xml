@@ -7,13 +7,6 @@
     <artifactId>shopping-cart</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
-         <properties>
-		<java.version>17</java.version>
-		<jacoco.version>0.8.7</jacoco.version>
-   		<sonar.java.coveragePlugin>jacoco</sonar.java.coveragePlugin>
-    		<sonar.dynamicAnalysis>reuseReports</sonar.dynamicAnalysis>
-    		<sonar.jacoco.reportPath>${project.basedir}/../target/jacoco.exec</sonar.jacoco.reportPath>
-    		<sonar.language>java</sonar.language>
 
     <name>shopping-cart</name>
     <description>Demo project for Spring Boot Shopping Cart</description>
@@ -113,49 +106,20 @@
             <artifactId>jquery</artifactId>
             <version>2.1.4</version>
         </dependency>
-             <!-- Jacoco -->
-          <dependency>
-            <groupId>org.jacoco</groupId> 
-            <artifactId>jacoco-maven-plugin</artifactId>
-            <version>0.8.7</version>
-</dependency>
-
-             
     </dependencies>
 
          <distributionManagement>
         <repository>
             <id>maven-releases</id>
-            <url>http://18.159.108.230:8081/repository/maven-releases/</url>
+            <url>http://35.157.130.187:9000/repository/maven-releases/</url>
         </repository>
         <snapshotRepository>
             <id>maven-snapshots</id>
-            <url>http://18.159.108.230:8081/repository/maven-snapshots/</url>
+            <url>http://35.157.130.187:9000/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
 
     <build>
-         <plugin>
-    <groupId>org.jacoco</groupId>
-    <artifactId>jacoco-maven-plugin</artifactId>
-    <version>${jacoco.version}</version>
-    <executions>
-        <execution>
-            <id>jacoco-initialize</id>
-            <goals>
-                <goal>prepare-agent</goal>
-            </goals>
-        </execution>
-        <execution>
-            <id>jacoco-site</id>
-            <phase>package</phase>
-            <goals>
-                <goal>report</goal>
-            </goals>
-        </execution>
-    </executions>
-</plugin>
-             
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
